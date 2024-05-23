@@ -145,3 +145,8 @@ MESSAGE_TAGS = {
 AUTHENTICATION_BACKENDS = [
      'django.contrib.auth.backends.ModelBackend'
 ]
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
