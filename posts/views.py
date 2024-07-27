@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 from posts.models import Comments, Post, Tags
+
 from django.contrib.auth.models import User
 
 def post_page(request, slug):
@@ -76,6 +77,9 @@ def post_page(request, slug):
         'related_posts': related_posts
     }
     return render(request, 'posts/post.html', context)
+
+
+
 
 
 def tag(request, slug):

@@ -42,20 +42,22 @@ def home(request):
     }
     return render(request, 'pages/home.html', context)
 
-
 def author(request, slug):
     profile = Profile.objects.get(slug=slug)
     top_posts = Post.objects.filter(author=profile.user).order_by('-post_views')[0:2]
     recent_posts = Post.objects.filter(author=profile.user).order_by('-last_updated')[0:2]
     top_authors = User.objects.annotate(number=Count('post')).order_by('number')
-
+    
     context = {
         'profile': profile,
         'top_posts': top_posts,
         'recent_posts': recent_posts,
         'top_authors': top_authors
-    }
+        }
+    
     return render(request, 'pages/author.html', context)
+    
+
 
 def search(request):
     search_query = ''
@@ -76,7 +78,7 @@ def about(request):
     if WebsiteMeta.objects.all().exists():
         website_info = WebsiteMeta.objects.all()[0]
 
-        context = {
+    context = {
             'website_info': website_info
         }
     return render(request, 'pages/about.html', context)

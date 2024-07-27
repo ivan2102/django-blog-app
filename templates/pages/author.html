@@ -10,7 +10,7 @@
           <div class="page-top">
             <div class="top flex">
               <div class="page-name">
-                <a href="#" class="learn">
+                <a href="{% url 'home' %}" class="learn">
                   <span class="material-icons"> keyboard_return </span> Go
                   back
                 </a>
@@ -119,10 +119,9 @@
               </div>
               <div class="recent-content">
                 <h3>
-                  {{ author.first_name }} {{ author.last_name }}
+                  {{ post.author.first_name }} {{ post.author.last_name }}
                 </h3>
-                <a class="learn" href="{% url 'author' author.profile.slug %}"
-                  >Learn more
+                <a class="learn" href="{% url 'author' author.profile.slug %}">Learn more
                   <span class="material-icons"> trending_flat </span></a
                 >
               </div>
@@ -130,8 +129,8 @@
             {% endfor %}
            
           </div>
-
         </div>
+      
         <!-- right layout end -->
       </div>
     </div>
@@ -139,3 +138,6 @@
 
 
 {% endblock  %}
+
+
+

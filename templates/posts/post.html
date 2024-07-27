@@ -217,7 +217,7 @@
                       {{ form.email }}
                       {{ form.website }}
                     </div>
-                    <button class="btn btn-primary rounded">
+                    <button type="submit" class="btn btn-primary rounded">
                       Post comment
                     </button>
                   </form>
@@ -295,7 +295,7 @@
                   <h3>
                     {{ author.first_name }} {{ author.last_name }}
                   </h3>
-                  <a class="learn" href="{% url 'author' author.profile.slug %}"
+                  <a class="learn" href="{% url 'author' post.author.profile.slug %}"
                     >Learn more
                     <span class="material-icons"> trending_flat </span></a
                   >
