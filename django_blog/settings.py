@@ -149,6 +149,8 @@ AUTHENTICATION_BACKENDS = [
      'django.contrib.auth.backends.ModelBackend'
 ]
 
+SECURE_CROSS_ORIGIN_OPENER_POLICY = None
+
 try:
     from .local_settings import *
 except ImportError:
