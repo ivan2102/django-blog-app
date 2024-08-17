@@ -17,8 +17,7 @@ def home(request):
 
     
 
-    if featured_blog:
-        featured_blog = featured_blog[0]
+    
     
 
     if request.POST:
