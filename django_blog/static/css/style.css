@@ -12,8 +12,12 @@
   color: var(--black);
 }
 
+body {
+  background-color: #f9f9f9;
+}
+
 :root {
-  --red: #ff4b64;
+  --red: #3d55ef !important;
   --black: #404040;
   --des: #555555;
   --shadow: #ffffff1a 0px 1px 1px 0px inset, #32325d40 0px 50px 100px -20px,
@@ -62,7 +66,7 @@ header {
   position: fixed;
   width: 100%;
   z-index: 99999;
-  background: white;
+  background: #f9f9f9;
   top: 0rem;
 }
 
@@ -278,7 +282,7 @@ header .container {
 }
 
 .learn span {
-  color: #ff4b64;
+  color: #3d55ef;
 }
 
 .sec-title {
@@ -915,6 +919,12 @@ p a {
   width: 40%;
   margin: 0rem !important;
 }
+
+
+#message {
+  text-align: center;
+}
+
 main {
   padding-top: 10rem !important;
 }
@@ -1049,18 +1059,17 @@ main {
   color: inherit; }
 
 .alert-link {
-  font-weight: 700; }
+  font-weight: 700;
+ }
 
 .alert {
   position: relative;
   padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
-  width: 50%;
-  margin-right: 50px;
+  width: 100%;
   font-size: 1.5rem;
- }
+  border-radius: 0.25rem; }
 
 .alert-dismissible {
   padding-right: 4rem; }
@@ -1071,15 +1080,6 @@ main {
     padding: 0.75rem 1.25rem;
     color: inherit; }
 
-.alert-danger {
-color: #792424;
-background-color: #fbdada;
-border-color: #f9cbcb; }
-.alert-danger hr {
-border-top-color: #f6b4b4; }
-.alert-danger .alert-link {
-color: #521818; }
-
 .alert-success {
   color: #11694f;
   background-color: #d2f4ea;
@@ -1088,6 +1088,16 @@ color: #521818; }
     border-top-color: #acebd8; }
   .alert-success .alert-link {
     color: #0a3d2e; }
+
+.alert-danger {
+color: #792424;
+background-color: #fbdada;
+margin-left: 50px;
+border-color: #f9cbcb; }
+.alert-danger hr {
+  border-top-color: #f6b4b4; }
+.alert-danger .alert-link {
+  color: #521818; }
 
 
 .close {
@@ -1099,11 +1109,11 @@ color: #000;
 text-shadow: 0 1px 0 #fff;
 opacity: .5; }
 .close:not(:disabled):not(.disabled) {
-cursor: pointer; }
-.close:not(:disabled):not(.disabled):hover, .close:not(:disabled):not(.disabled):focus {
-color: #000;
-text-decoration: none;
-opacity: .75; }
+  cursor: pointer; }
+  .close:not(:disabled):not(.disabled):hover, .close:not(:disabled):not(.disabled):focus {
+    color: #000;
+    text-decoration: none;
+    opacity: .75; }
     
 button.close {
 padding: 0;

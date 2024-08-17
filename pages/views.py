@@ -15,8 +15,7 @@ def home(request):
     subscribe_form = SubscribeForm()
     website_info = None
 
-    if WebsiteMeta.objects.all().exists():
-        website_info = WebsiteMeta.objects.all()[0]
+    
 
     if featured_blog:
         featured_blog = featured_blog[0]

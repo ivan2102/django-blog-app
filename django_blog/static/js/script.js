@@ -3,6 +3,7 @@ let main = document.querySelector("main");
 main.style.paddingTop = header.offsetHeight + "px";
 let link = document.querySelector(".links");
 
+
 function menu() {
   link.classList.toggle("active");
 }
@@ -17,10 +18,11 @@ function toggleDiv(a) {
   }
 }
 
-
-
-
 setTimeout(function() {
 
-    $('#message').fadeOut('slow');
+  $('#message').fadeOut('slow');
 }, 3000);
+
+
+
+
